@@ -22,7 +22,9 @@
 
   <main>
     <h2>Order a Service</h2>
-    <form action="https://formsubmit.co/outlawtechsolutions@gmail.com" method="POST">
+    <form name="order" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="order">
+
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="Full Name" required>
 
