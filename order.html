@@ -1,17 +1,49 @@
-<form name="order" method="POST" data-netlify="true" action="thankyou.html">
-  <input type="hidden" name="form-name" value="order">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order a Service | Outlaw Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="Outlaw Tech Logo" class="logo">
+      <h1>Outlaw Tech Solutions & Services</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-  <label for="name">Full Name:</label>
-  <input type="text" id="name" name="Full Name" required>
+  <main>
+    <h2>Order a Service</h2>
+    <form action="https://usebasin.com/f/bbe805ca29d9" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="Full Name" required>
 
-  <label for="email">Email Address:</label>
-  <input type="email" id="email" name="Email" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="Email" required>
 
-  <label for="phone">Phone Number:</label>
-  <input type="tel" id="phone" name="Phone" required>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="Phone" required>
 
-  <label for="message">What Service Do You Need?</label>
-  <textarea id="message" name="Service Request" rows="5" required></textarea>
+      <label for="message">What Service Do You Need?</label>
+      <textarea id="message" name="Service Request" rows="5" required></textarea>
 
-  <button type="submit">Submit</button>
-</form>
+      <!-- Redirect to thankyou.html after successful submission -->
+      <input type="hidden" name="_redirect" value="https://outlawtechsolutions.netlify.app/thankyou.html">
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Email: outlawtechsolutions@gmail.com</p>
+  </footer>
+</body>
+</html>
