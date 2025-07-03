@@ -68,3 +68,14 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
