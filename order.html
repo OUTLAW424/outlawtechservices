@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<video autoplay muted loop id="bg-video" style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1; object-fit:cover;">
+  <source src="assets/videos/background.mp4" type="video/mp4">
+</video>
+
   <header>
     <div class="logo-title">
       <img src="logo.png" alt="Outlaw Tech Logo" class="logo">
@@ -45,5 +50,32 @@
   <footer>
     <p>Email: outlawtechsolutions@gmail.com</p>
   </footer>
+
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+  <a href="https://wa.me/254724003765" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp" style="width:60px; height:60px;">
+  </a>
+</div>
+
+
+<div id="rating-comments" style="margin-top:30px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+  <h3>Rate & Comment</h3>
+  <form>
+    <label>Rating: </label>
+    <select>
+      <option>⭐</option>
+      <option>⭐⭐</option>
+      <option>⭐⭐⭐</option>
+      <option>⭐⭐⭐⭐</option>
+      <option>⭐⭐⭐⭐⭐</option>
+    </select>
+    <br><br>
+    <textarea placeholder="Leave your comment here..." style="width:100%; height:100px;"></textarea>
+    <br><br>
+    <button type="button">Submit</button>
+  </form>
+</div>
+
 </body>
 </html>
