@@ -2,80 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Order a Service | Outlaw Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order - Outlaw Tech Solutions</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="reviews.js"></script>
 </head>
 <body>
-
-<video autoplay muted loop id="bg-video" style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1; object-fit:cover;">
-  <source src="assets/videos/background.mp4" type="video/mp4">
-</video>
-
   <header>
-    <div class="logo-title">
-      <img src="logo.png" alt="Outlaw Tech Logo" class="logo">
-      <h1>Outlaw Tech Solutions & Services</h1>
-    </div>
+    <h1>Place an Order</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="order.html">Order</a>
-      <a href="contact.html">Contact</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>Order a Service</h2>
-    <form action="https://usebasin.com/f/bbe805ca29d9" method="POST">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="Full Name" required>
+    <form>
+      <label for="service">Choose Service:</label>
+      <select id="service" name="service">
+        <option>Electrical Wiring</option>
+        <option>Solar Installation</option>
+        <option>Wi-Fi Extension</option>
+        <option>Laptop Repairs</option>
+      </select><br><br>
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="Email" required>
+      <label for="details">Details:</label><br>
+      <textarea id="details" name="details" rows="4"></textarea><br><br>
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="Phone" required>
-
-      <label for="message">What Service Do You Need?</label>
-      <textarea id="message" name="Service Request" rows="5" required></textarea>
-
-      <!-- Redirect to thankyou.html after successful submission -->
-      <input type="hidden" name="_redirect" value="https://outlawtechsolutions.netlify.app/thankyou.html">
-
-      <button type="submit">Submit</button>
+      <button type="submit">Submit Order</button>
     </form>
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <form id="reviewForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required><br><br>
+        <label for="contact">Contact (optional):</label><br>
+        <input type="text" id="contact"><br><br>
+        <label for="rating">Rating:</label><br>
+        <select id="rating" required>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select><br><br>
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" required></textarea><br><br>
+        <button type="submit">Submit Review</button>
+      </form>
+      <ul id="reviewList"></ul>
+    </section>
   </main>
 
   <footer>
-    <p>Email: outlawtechsolutions@gmail.com</p>
+    <p>&copy; 2025 Outlaw Tech Solutions & Services</p>
   </footer>
 
-<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-  <a href="https://wa.me/254724003765" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp" style="width:60px; height:60px;">
-  </a>
-</div>
-
-
-<div id="rating-comments" style="margin-top:30px; padding:20px; border:1px solid #ddd; border-radius:10px;">
-  <h3>Rate & Comment</h3>
-  <form>
-    <label>Rating: </label>
-    <select>
-      <option>⭐</option>
-      <option>⭐⭐</option>
-      <option>⭐⭐⭐</option>
-      <option>⭐⭐⭐⭐</option>
-      <option>⭐⭐⭐⭐⭐</option>
-    </select>
-    <br><br>
-    <textarea placeholder="Leave your comment here..." style="width:100%; height:100px;"></textarea>
-    <br><br>
-    <button type="button">Submit</button>
-  </form>
-</div>
-
+  <a href="https://wa.me/254724003765" class="whatsapp-float" target="_blank">💬</a>
 </body>
 </html>
